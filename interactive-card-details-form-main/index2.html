@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <input type="text" id="card-number" />
+    <input type="text" id="mon" />
+    <input type="text" id="year" />
+    <input type="text" id="cvc" />
+    <p id="pName">sdfsdfsdf</p>
+    <p id="nameError" style="color:red;"></p>
+    <p id="pCardError" style="color: red"></p>
+    <p id="p1"></p>
+    
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="pMon">asdasd</p>
+    <p id="pYear">asdasd</p>
+    <p id="pCVC">asdasd</p>
+    <script>
+      //   JS version
+      const inputName = document.getElementById("name");
+      const inputCard = document.getElementById("card-number");
+      const inputMon = document.getElementById("mon");
+      const inputYear = document.getElementById("year");
+      const inputCVC = document.getElementById("cvc");
+
+      console.log(inputName);
+      const updateName = () => {
+        const inputValue = document.getElementById("name").value;
+        document.getElementById("pName").innerHTML = inputValue;
+        if (inputValue.length <5){
+              document.getElementById("nameError").innerHTML="Enter your name";
+        }else{
+            document.getElementById("nameError")="";
+        }
+      };
+      const updateCard = () => {
+        const inputVal = document.getElementById("card-number").value;
+        if (inputVal.length > 16 || inputVal.length < 16) {
+          document.getElementById("pCardError").innerHTML =
+            "Siz hato malumot yozyabsiz";
+        } 
+        else {
+          document.getElementById("pCardError").innerHTML = "";             
+        }
+
+        let groups = [];
+        for (let i = 0; i < 16; i += 4) {
+          groups.push(inputVal.slice(i, i + 4));
+        }
+        document.getElementById("p1").innerHTML = groups[0];
+        document.getElementById("p2").innerHTML = groups[1];
+        document.getElementById("p3").innerHTML = groups[2];
+        document.getElementById("p4").innerHTML = groups[3];
+      };
+      console.log(inputMon)
+      const updateMon=() =>{
+         const inputValue = document.getElementById("mon").value;
+         document.getElementById("pMon").innerHTML =inputValue
+      }
+      console.log(inputYear);
+      const updateYear = () =>{
+        const inputValue = document.getElementById("year").value
+        document.getElementById("pYear").innerHTML =inputValue
+      }
+      console.log(inputCVC);
+      const updateCVC = () => {
+        const inputValue = document.getElementById("cvc").value;
+        document.getElementById("pCVC").innerHTML=inputValue
+      }
+
+      inputName.addEventListener("input", updateName);
+      inputCard.addEventListener("input", updateCard);
+      inputMon.addEventListener("input", updateMon);
+      inputYear.addEventListener("input", updateYear);
+      inputCVC.addEventListener("input", updateCVC);
+    </script>
+    console.log(inputName);
+    const updateName = () => {
+      const inputValue = document.getElementById("name").value;
+      document.getElementById("pName").innerHTML = inputValue;
+    };
+  </body>
+</html> -->

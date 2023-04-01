@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="sass.css">
+</head>
+<body>
+  <img src="./images/bg-main-desktop.png" alt="bg-main" class="bg-main">
+  <div class="">
+    <img src="./images/bg-card-front.png" alt="bg-card-front" class="bg-card-front">
+  </div>
+    <img src="./images/bg-card-back.png" alt="bg-card-back" class="bg-card-back">  
+  <div class="block-1">
+    <img src="./images/card-logo.svg" alt="logo" class="logo">
+    <p id="spans" class="p-1">
+      <span id="p1"></span>
+      <span id="p2"></span>
+      <span id="p3"></span>
+      <span id="p4"></span>
+    </p>
+    
+   
+    <div class="flex">
+      <p class="p-2" id="pName"></p>
+      <p class="p-3">
+        <span id="mon1"></span>
+        <span class="mon2">/</span>
+        <span id="mon3"></span> 
+      </p>  
+    </div>
+  </div>
+  <p class="p-4" id="pcvc" ></p>
+  <form action="">
+    <div class="block-2">
+      <p class="p-5">
+        Cardholder Name
+      </p>
+      <input class="input-1" type="text" placeholder=""  id="Name" required>
+      <span id="nameError" style="color: red;"></span>
+      <p class="p-6">
+        Card Number
+      </p>
+      <input class="input-2" placeholder="" type="number" name="" id="card" required>
+      <span id="cardError" style="color: red;"></span>
+      <div class="flex">
+        <div class="">
+          <p class="p-7">
+            Exp. Date (MM/YY)
+          </p>
+          <input class="input-3" placeholder="MM" type="text" name="" id="month" required>
+          <span id="errorMon" style="color: red;"></span>
+          <input class="input-4" placeholder="YY" type="text" id="year" required>
+          <span id="errorYear" style="color: red;"></span>  
+        </div>
+        <div class="">
+          <p class="p-8">
+            CVC
+          </p>
+          <input class="input-5" placeholder="e.g. 123" type="text" id="cvc" required>  
+          <span id="errorcvc" style="color: red;"></span>  
+        </div>
+      </div>
+      <button class="btn" style="color: white; font-size: 17px;">Confirm</button>
+    </div>  
+  </form>
+  <script src="script.js"></script>
+  <div class="container2">
+    <img src="./images/icon-complete.svg" alt="" class="complete">
+    <div class="div"><span class="span1">thank you!</span></div>
+    <p class="span2">We've added your card details</p>
+    <div class="button4">
+      <span class="span3">Continue</span>
+    </div>
+  </div>
+</body>
+</html>
